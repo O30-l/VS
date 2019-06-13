@@ -1,0 +1,69 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "type": "shell",
+    "tasks": [
+        {
+            "label": "运行",
+            "command": "chcp 65001 && \"${workspaceRoot}/tools/w3x2lni/bin/w3x2lni-lua.exe\"",
+            "args": [
+                ".\\tools\\运行.lua",
+                "${workspaceRoot}"
+            ]
+        },
+        {
+            "label": "配置",
+            "command": "chcp 65001 && \"${workspaceRoot}/tools/w3x2lni/bin/w3x2lni-lua.exe\"",
+            "args": [
+                ".\\tools\\配置.lua",
+                "${workspaceRoot}"
+            ]
+        },
+        {
+            "label": "Obj",
+            "command": "chcp 65001 && \"${workspaceRoot}/tools/w3x2lni/w2l.exe\"",
+            "presentation": {
+                "echo": false,
+                "reveal": "always",
+                "focus": true,
+                "panel": "new"
+            },
+            "args": [
+                "obj",
+                "${workspaceRoot}",
+                "${workspaceRoot}/VS.w3x"
+            ]
+        },
+        {
+            "label": "Lni",
+            "command": "chcp 65001 && \"${workspaceRoot}/tools/w3x2lni/w2l.exe\"",
+            "presentation": {
+                "echo": false,
+                "reveal": "always",
+                "focus": true,
+                "panel": "new"
+            },
+            "args": [
+                "lni",
+                "${workspaceRoot}/VS.w3x",
+                "${workspaceRoot}"
+            ]
+        },
+        {
+            "label": "Slk",
+            "command": "chcp 65001 && \"${workspaceRoot}/tools/w3x2lni/w2l.exe\"",
+            "presentation": {
+                "echo": false,
+                "reveal": "always",
+                "focus": true,
+                "panel": "new"
+            },
+            "args": [
+                "slk",
+                "${workspaceRoot}",
+                "${workspaceRoot}/VS.w3x"
+            ]
+        }
+    ]
+}
